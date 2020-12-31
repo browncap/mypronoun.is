@@ -1,0 +1,54 @@
+.description {
+  padding: 5px 27px;
+}
+
+.description a {
+  color: #40afff;
+}
+
+.description p {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.description p:first-child {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.description p:last-child {
+  margin-bottom: 18px;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.lessPadding {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.textContainer {
+  width: 60%;
+  padding-left: 20%;
+  padding-right:20%;
+}
+
+@media(orientation: landscape) and (max-width: 840px){
+  .textContainer {
+    padding-bottom: 50px;
+    padding-top:35px;
+    height: auto;
+  }
+}
+
+@media(max-width: 600px){
+  .textContainer {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+  }
+}
