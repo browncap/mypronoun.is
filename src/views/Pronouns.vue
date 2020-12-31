@@ -27,27 +27,26 @@ export default {
     PronounError,
     TwoPronouns
   },
+  methods: {
+    pronounRequest: function(path, setPronounFunc) {
+      axios.get(path)
+        .then(response => setPronounFunc(response))
+        .catch(err => this.handleHttpError(err))
+    },
+  },
   created(){
     var or = this.$route.query.or == undefined;
     var secondPronoun = this.$route.params.secondPronoun == undefined;
     var backendUrl = process.env.VUE_APP_BACKEND_URL;
 
     if (or && secondPronoun) {
-      axios.get(backendUrl.concat('/' + this.$route.params.pronoun))
-        .then(response => this.setPronoun(response))
-        .catch(err => this.handleHttpError(err))
+      this.pronounRequest(backendUrl.concat('/' + this.$route.params.pronoun), this.setPronoun)
     } else if (!or && secondPronoun) {
-      axios.get(backendUrl.concat('/' + this.$route.params.pronoun + '?or=' + this.$route.query.or))
-        .then(response => this.setTwoPronouns(response))
-        .catch(err => this.handleHttpError(err))
+      this.pronounRequest(backendUrl.concat('/' + this.$route.params.pronoun + '?or=' + this.$route.query.or), this.setTwoPronouns)
     } else if (or && !secondPronoun) {
-      axios.get(backendUrl.concat('/' + this.$route.params.pronoun + '/' + this.$route.params.secondPronoun))
-        .then(response => this.setPronoun(response))
-        .catch(err => this.handleHttpError(err))
+      this.pronounRequest(backendUrl.concat('/' + this.$route.params.pronoun + '/' + this.$route.params.secondPronoun), this.setPronoun)
     } else {
-      axios.get(backendUrl.concat('/' + this.$route.params.pronoun + '/' + this.$route.params.secondPronoun + '?or=' + this.$route.query.or))
-        .then(response => this.setTwoPronouns(response))
-        .catch(err => this.handleHttpError(err))
+      this.pronounRequest(backendUrl.concat('/' + this.$route.params.pronoun + '/' + this.$route.params.secondPronoun + '?or=' + this.$route.query.or), this.setTwoPronouns)
     }
   }
 }
