@@ -1,4 +1,7 @@
 # mypronoun.is
+[mypronoun.is](https://mypronoun.is) gives users a simple way to share pronoun usage examples.
+
+Uses [pronoun-api](https://github.com/browncap/pronoun-api) to retrieve pronouns.
 
 ## Project setup
 ```
