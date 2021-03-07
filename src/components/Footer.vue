@@ -4,7 +4,7 @@
     <span>|</span>
     <a href=""><p v-on:click='routeTo("About")'>About</p></a>
     <span>|</span>
-    <a href=""><p v-on:click='routeTo("Donate")'>Donate</p></a>
+    <a href="https://www.translivesmatter.xyz"><p>Donate</p></a>
   </footer>
 </template>
 
