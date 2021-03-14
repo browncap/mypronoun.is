@@ -1,8 +1,8 @@
 <template>
   <footer id="main-footer">
-    <p>Patreon</p>
+    <a href="https://www.theycount.xyz"><p>They Count</p></a>
     <span>|</span>
-    <a href=""><p v-on:click='routeTo("About")'>About</p></a>
+    <a href=""><p v-on:click='routeTo("About")'>Home</p></a>
     <span>|</span>
     <a href="https://www.translivesmatter.xyz"><p>Donate</p></a>
   </footer>
