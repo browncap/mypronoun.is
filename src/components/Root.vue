@@ -6,7 +6,7 @@
       </section>
       <section class="description">
         <p>You can use mypronoun.is to share examples of pronoun usages!</p>
-        <p><b>Example URLs:</b></p>
+        <p><b>Examples</b></p>
         <p>• <a href="https://mypronoun.is/they">mypronoun.is/<b>they</b></a></p>
         <p>• <a href="https://mypronoun.is/they/them">mypronoun.is/<b>they</b>/<b>them</b></a></p>
         <p>• <a href="https://mypronoun.is/they?or=she">mypronoun.is/<b>they</b>?or=<b>she</b></a></p>
